@@ -1,0 +1,9 @@
+class Solution {
+    public int minCostToMoveChips(int[] position) {
+        int even_c=0;
+        for(int chip: position){
+            even_c += (chip%2 == 0)? 1 : 0;
+        }
+        return Math.min(even_c, position.length - even_c);
+    }
+}
